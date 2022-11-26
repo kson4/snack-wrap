@@ -10,6 +10,9 @@ body {
 a {
   text-decoration: none;
 }
+li {
+  list-style: none;
+}
 .bold {
   font-weight: bold;
 }
@@ -49,14 +52,29 @@ h1 {
   align-items: center;
   margin: 0 20%;
 }
+.home-title {
+  margin-bottom: 3%;
+}
 .home-container {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
-
 .home-img {
-  margin-top: 5%;
+  margin-top: 15%;
+}
+
+.author {
+  text-align: center;
+}
+.author-title {
+  margin-bottom: 5%;
+}
+.author-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5%;
 }
 
 .petition-stats {
@@ -69,12 +87,29 @@ h1 {
   font-size: 0.85rem;
   margin-bottom: 1%;
 }
-#petition-signup > input {
+.petition-input {
   margin-bottom: 5%;
   width: 100%;
   height: 30px;
   border: 1px solid black;
   border-radius: 10px;
+  padding: 0 2.5%;
+}
+.petition-input-textarea {
+  margin-bottom: 5%;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0 2.5%;
+  resize: none;
+}
+.petition-auth-container {
+  width: 100%;
+}
+.auth-span {
+  font-size: 0.85rem;
+  /* text-align: center; */
+  margin: auto;
 }
 #petition-signup > div {
   text-align: center;
@@ -84,5 +119,6 @@ h1 {
   width: 100%;
   height: 30px;
   padding: 2% 0;
+  margin-top: 3%;
   border-radius: 10px;
 }

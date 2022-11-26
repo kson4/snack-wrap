@@ -1,10 +1,19 @@
 <%- include("./partials/head.ejs") %>
 
   <div class="home-page">
-    <h2>Bring Back the Snack Wrap</h2>
+    <h2 class="home-title">Bring Back the Snack Wrap</h2>
     <div class="home-container">
       <div class="home-left">
         <div><img class="home-img" src="./sw.jpg" alt=""></div>
+        <div class="author">
+          <p class="author-title">Petition created by: David Son</p>
+          <ul class="author-socials">
+            <li><i class="fa-brands fa-github fa-2xl"></i></li>
+            <li><i class="fa-brands fa-linkedin-in fa-2xl"></i></li>
+            <li><i class="fa-solid fa-blog fa-xl"></i></li>
+            <li><i class="fa-solid fa-share-from-square fa-xl"></i></li>
+          </ul>
+        </div>
         <div class="message"></div>
       </div>
       <div class="home-right">
@@ -17,11 +26,17 @@
         <h2 class="petition-signup-title">Sign this petition</h2>
         <form id="petition-signup" action="">
           <p>First Name</p>
-          <input type="text" name="firstName">
+          <input class="petition-input" type="text" name="firstName">
           <p>Last Name</p>
-          <input type="text" name="lastName">
+          <input class="petition-input" type="text" name="lastName">
           <p>Email</p>
-          <input type="email" name="email">
+          <input class="petition-input" type="email" name="email">
+          <p>Comment</p>
+          <textarea class="petition-input-textarea" name="comment" cols="30" rows="5"></textarea>
+          <div class="petition-auth-container">
+            <input type="checkbox" name="auth-petition">
+            <span class="auth-span">Authorize my name and message to be displayed</span>
+          </div>
           <div>
             <button id="petition-signup-btn" class="btn" type="submit">Sign Petition</button>
           </div>
