@@ -1,0 +1,35 @@
+<%- include("./partials/head.ejs") %>
+
+  <div class="home-page">
+    <h2>Bring Back the Snack Wrap</h2>
+    <div class="home-container">
+      <div class="home-left">
+        <div><img class="home-img" src="./sw.jpg" alt=""></div>
+        <div class="message"></div>
+      </div>
+      <div class="home-right">
+        <div class="petition-stats">
+          <span class="bold">10,000 have signed.</span>
+          <span>Let's get 20,000!</span>
+          <p>SOMEONE has signed this petition!</p>
+          <p>SOMEONE has signed this petition!</p>
+        </div>
+        <h2 class="petition-signup-title">Sign this petition</h2>
+        <form id="petition-signup" action="">
+          <p>First Name</p>
+          <input type="text" name="firstName">
+          <p>Last Name</p>
+          <input type="text" name="lastName">
+          <p>Email</p>
+          <input type="email" name="email">
+          <div>
+            <button id="petition-signup-btn" class="btn" type="submit">Sign Petition</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+
+
+<%- include("./partials/footer.ejs") %>
