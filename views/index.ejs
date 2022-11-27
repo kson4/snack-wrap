@@ -14,7 +14,36 @@
             <li><i class="fa-solid fa-share-from-square fa-xl"></i></li>
           </ul>
         </div>
-        <div class="message"></div>
+        <div class="message">
+          <p>
+            Many people could agree that McDonald's snack wraps were one of the best items on the menu 
+            (personally, McDonald's snack wraps were the second best item in the menu, 
+            just barely losing to the fries). Not only were the snack wraps incredibly delicious, 
+            they were also relatively healthy.
+          </p>
+          <p>
+            The snack wrap was discontinued in most U.S. locations back in 2016 and removed nation
+            wide back in 2020. However, I believe that with enough noise and support, McDonald's
+            just might bring them back.
+          </p>
+        </div>
+        <div class="petition-msg-board">
+          <% for(let i = 0; i < petitions.length; i++) { %>
+            <div class="petition-msg">
+              <div class="petition-msg-left">
+                <img src="" alt="profile-pic">
+              </div>
+              <div class="petition-msg-right">
+                <div class="petition-msg-right-top">
+                  <span><%= petitions[i].firstName %> <%= petitions[i].lastName %></span>
+                </div>
+                <div class="petition-msg-right-bot">
+                  <p><%= petitions[i].message %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
       </div>
       <div class="home-right">
         <div class="petition-stats">
@@ -24,21 +53,21 @@
           <p>SOMEONE has signed this petition!</p>
         </div>
         <h2 class="petition-signup-title">Sign this petition</h2>
-        <form id="petition-signup" action="">
+        <form id="petition-signup" action="/signed-petition" method="POST">
           <p>First Name</p>
           <input class="petition-input" type="text" name="firstName">
           <p>Last Name</p>
           <input class="petition-input" type="text" name="lastName">
           <p>Email</p>
           <input class="petition-input" type="email" name="email">
-          <p>Comment</p>
-          <textarea class="petition-input-textarea" name="comment" cols="30" rows="5"></textarea>
+          <p>Message</p>
+          <textarea class="petition-input-textarea" name="message" cols="30" rows="5"></textarea>
           <div class="petition-auth-container">
             <input type="checkbox" name="auth-petition">
             <span class="auth-span">Authorize my name and message to be displayed</span>
           </div>
           <div>
-            <button id="petition-signup-btn" class="btn" type="submit">Sign Petition</button>
+            <input id="petition-signup-btn" class="btn" type="submit" value="Sign Petition">
           </div>
         </form>
       </div>

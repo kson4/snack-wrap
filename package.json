@@ -19,9 +19,12 @@
   },
   "homepage": "https://github.com/kson4/snack-wrap#readme",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.3",
     "nodemon": "^2.0.20"
   }
 }
