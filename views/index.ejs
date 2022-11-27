@@ -27,30 +27,46 @@
             just might bring them back.
           </p>
         </div>
+        
         <div class="petition-msg-board">
-          <% for(let i = 0; i < petitions.length; i++) { %>
+          <h2>Petitions Signed by Others:</h2>
+          <% for (let i = petitions.length - 1; i >= 0; i--) { %>
             <div class="petition-msg">
               <div class="petition-msg-left">
-                <img src="" alt="profile-pic">
+                <div class="name-circle">
+                  <%= petitions[i].firstName[0].toUpperCase() %>
+                  <%= petitions[i].lastName[0].toUpperCase() %>
+                </div>
               </div>
               <div class="petition-msg-right">
                 <div class="petition-msg-right-top">
-                  <span><%= petitions[i].firstName %> <%= petitions[i].lastName %></span>
+                  <span>
+                    <%= petitions[i].firstName %> 
+                    <%= petitions[i].lastName %>
+                    <%= petitions[i].date %>
+                  </span>
                 </div>
                 <div class="petition-msg-right-bot">
                   <p><%= petitions[i].message %></p>
                 </div>
               </div>
             </div>
+            <hr>
           <% } %>
         </div>
       </div>
       <div class="home-right">
         <div class="petition-stats">
-          <span class="bold">10,000 have signed.</span>
-          <span>Let's get 20,000!</span>
-          <p>SOMEONE has signed this petition!</p>
-          <p>SOMEONE has signed this petition!</p>
+          <div class="numPetitions">
+            <span class="bold"><%= numPetitions %> people have signed the petition!</span>
+            <span>Let's get 100!</span>
+          </div>
+          <% for (let i = petitions.length - 1; i > petitions.length - 3; i--) { %>
+              <div class="petition-stats-message">
+                <span><%= petitions[i].firstName[0] %> <%= petitions[i].lastName[0] %></span>
+                <span> has signed this petition!</span>
+              </div>
+          <% } %>
         </div>
         <h2 class="petition-signup-title">Sign this petition</h2>
         <form id="petition-signup" action="/signed-petition" method="POST">
@@ -63,8 +79,8 @@
           <p>Message</p>
           <textarea class="petition-input-textarea" name="message" cols="30" rows="5"></textarea>
           <div class="petition-auth-container">
-            <input type="checkbox" name="auth-petition">
-            <span class="auth-span">Authorize my name and message to be displayed</span>
+            <!-- <input type="checkbox" name="auth-petition">
+            <span class="auth-span">Authorize my name and message to be displayed</span> -->
           </div>
           <div>
             <input id="petition-signup-btn" class="btn" type="submit" value="Sign Petition">

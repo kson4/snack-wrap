@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 
+const timeElapsed = Date.now();
+const today = new Date(timeElapsed);
+
 const PetitionSchema = new mongoose.Schema({
   firstName: {
     type: String,
@@ -16,8 +19,8 @@ const PetitionSchema = new mongoose.Schema({
     type: String,
   },
   date: {
-    type: Date,
-    default: () => Date.now(),
+    type: String,
+    default: () => today.toDateString(),
   },
 });
 

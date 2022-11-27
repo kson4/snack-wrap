@@ -10,6 +10,9 @@ body {
 a {
   text-decoration: none;
 }
+p {
+  font-size: 1.25rem;
+}
 li {
   list-style: none;
 }
@@ -94,12 +97,44 @@ h2 {
 .author-socials > li {
   cursor: pointer;
 }
-
+.petition-msg-board > h2 {
+  margin-bottom: 5%;
+}
+.petition-msg-board > hr {
+  margin-bottom: 5%;
+  border: 1px solid rgba(126, 126, 126, 0.3);
+}
 .message > p {
   margin-bottom: 3%;
 }
 
+.name-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1px;
+  border-radius: 50px;
+  font-size: 1.25rem;
+  width: 50px;
+  height: 50px;
+  background-color: #808080;
+  margin-right: 15px;
+}
+.petition-msg {
+  display: flex;
+  margin-bottom: 5%;
+}
+
 /* HOME - RIGHT SIDE */
+.numPetitions {
+  margin-bottom: 5%;
+  font-size: 1.25rem;
+}
+.petition-stats-message {
+  font-size: 1.25rem;
+  color: #808080;
+}
+
 .petition-stats {
   margin: 10% 0;
 }
